@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Secular+One&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="arcane.css">
+  <link rel="stylesheet" href="animations.css">
+
+  <title>Arcane</title>
+</head>
+
+
+
+
+
+
+
+<body>
+  <div class="webContainer">
+    <!-- =================================================================================================== -->
+    <!-- navbar -->
+    <!-- =================================================================================================== -->
+
+    <nav class="navbar">
+      <div class="minibox">
+        <div class="brand-img"><img src="./imgs/hexcore.png"></div>
+        <a href="#top">
+          <h1 class="brand-title">ARCANE</h1>
+        </a>
+      </div>
+      <!-- navbar links -->
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#">Story</a></li>
+          <li><a href="#wrapper">Characters</a></li>
+          <!-- <li><a href="self_intro.html">About</a></li> -->
+          <li><a href="https://chubbychang914.github.io/Arcane_Website/self_intro.html">About</a></li>
+        </ul>
+      </div>
+
+      <!-- the hamburger menu -->
+      <div class="toggle-button" style="background-color: black !important;">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+    <!-- =================================================================================================== -->
+    <!-- title page -->
+    <!-- =================================================================================================== -->
+
+    <div id="title-page">
+
+      <!-- top glass -->
+      <div id="glassTop"><img src="./imgs/glassTop.png" alt=""></div>
+      <!-- background video -->
+      <video autoplay loop muted plays-inline class="back-video">
+        <source src="./imgs/Final cut.mp4">
+      </video>
+      <!-- bottom glass -->
+      <div id="glassBottom"><img src="./imgs/glassBottom.png" alt=""></div>
+
+
+
+      <!-- middle letters -->
+      <div class="mainContent">
+
+        <div id="letterBox">
+          <div><img src="./imgs/A.logo.png"></div>
+          <div><img src="./imgs/R.logo.png"></div>
+          <div><img src="./imgs/C.logo.png"></div>
+          <div><img src="./imgs/A.logo.png"></div>
+          <div><img src="./imgs/N.logo.png"></div>
+          <div><img src="./imgs/E.logo.png"></div>
+        </div>
+
+        <div id="lolLogo"><img src="./imgs/league of legends logo.png"></div>
+
+
+        <button id="trailerBtn" style="z-index:999 ;" class="button-57" role="button">
+          <span class="text">Watch &nbsp;<i class="fa-sharp fa-solid fa-play"></i></span>
+          <span><img style="object-fit:scale-down;" src="./imgs/netflix banner.jpg">
+          </span>
+        </button>
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+    <!-- =================================================================================================== -->
+    <!-- scrolltrigger part -->
+    <!-- =================================================================================================== -->
+
+    <div class="scroll-container">
+      <div class="cover"></div>
+
+      <div class="transition1" style="width:100vw; height:100vh;background-color:blue ;"></div>
+      <!-- ====================================== -->
+      <!-- part one ============================= -->
+      <div class="divided">
+        <p>Two sisters. Two cities</p>
+        <h1>A HOUSE <br> DIVIDED</h1>
+      </div>
+
+      <div class="transition2" style="width:100%; height:100vh"></div>
+      <!-- ====================================== -->
+      <!-- part two ============================= -->
+      <div id="jinxvi-page">
+
+        <div class="paragraphBox">
+          <h1 class="slideh1"><span>Jinx</span> and <span>Vi</span></h1><br>
+          <p class="slidep">
+            Two sisters. Two cities. One discovery that will change the world forever. In the cities of
+            Piltover and Zaun, unrest stirs as inventors and thieves, politicians and crime lords chafe against the
+            constraints of a society torn asunder.
+          </p>
+        </div>
+        <!-- filter screen -->
+        <div style="width:100vw; height:100vh; background: rgba(0,0,0,0.4); position: absolute;top: 0;"></div>
+
+      </div>
+
+      <div class="transition3" style="width:100vw; height:100vh"></div>
+      <!-- ====================================== -->
+      <!-- part three =========================== -->
+
+      <div id="characterslide">
+
+        <div id="wrapper">
+
+          <div id="char-card-box">
+            <!-- vi -->
+            <div class="char-card vi" style="margin-left:30px;">
+              <img src="./imgs/CharacterPoster-Vi.jpeg">
+              <div class="txt">
+                <p>The Piltover Enforcer</p>
+              </div>
+              <img src="./imgs/zaun-crest-500.png" class="zaunCrest">
+            </div>
+            <div class="modal" id="vi-modal">
+              <div class="modal-header">
+                <div class="title">Vi</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/vigif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+            <!-- jinx -->
+            <div class="char-card jinx">
+              <img src="./imgs/CharacterPoster-Jinx.jpeg">
+              <div class="txt">
+                <p>The Loose Cannon</p>
+              </div>
+              <img src="./imgs/zaun-crest-500.png" class="zaunCrest">
+            </div>
+            <div class="modal" id="jinx-modal">
+              <div class="modal-header">
+                <div class="title">Jinx</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/jinxgif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+
+            <!-- jayce -->
+            <div class="char-card jayce">
+              <img src="./imgs/CharacterPoster-Jayce.jpeg">
+              <div class="txt">
+                <p>Piltover's Defender</p>
+              </div>
+              <img src="./imgs/piltover-crest-no-glow.png" class="piltoverCrest">
+            </div>
+            <div class="modal" id="jayce-modal">
+              <div class="modal-header">
+                <div class="title">Jayce</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/jaycegif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+            <!-- mel -->
+            <div class="char-card mel">
+              <img src="./imgs/CharacterPoster-Mel.jpeg">
+              <div class="txt">
+                <p>Councilor Medarda</p>
+              </div>
+              <img src="./imgs/piltover-crest-no-glow.png" class="piltoverCrest">
+            </div>
+            <div class="modal" id="mel-modal">
+              <div class="modal-header">
+                <div class="title">Mel</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/medardagif.webp"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+
+            <!-- vander -->
+            <div class="char-card vander">
+              <img src="./imgs/CharacterPoster-Vander.jpeg">
+              <div class="txt">
+                <p>The Hound</p>
+              </div>
+              <img src="./imgs/zaun-crest-500.png" class="zaunCrest">
+            </div>
+            <div class="modal" id="vander-modal">
+              <div class="modal-header">
+                <div class="title">Vander</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/vandergif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+            <!-- silco -->
+            <div class="char-card silco">
+              <img src="./imgs/CharacterPoster-Silco.jpeg">
+              <div class="txt">
+                <p>The Eye of Zaun</p>
+              </div>
+              <img src="./imgs/zaun-crest-500.png" class="zaunCrest">
+            </div>
+            <div class="modal" id="silco-modal">
+              <div class="modal-header">
+                <div class="title">Silco</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/silcogif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+            <!-- cait -->
+            <div class="char-card cait">
+              <img src="./imgs/CharacterPoster-Cait.jpeg">
+              <div class="txt">
+                <p>Sheriff of Piltover</p>
+              </div>
+              <img src="./imgs/piltover-crest-no-glow.png" class="piltoverCrest">
+            </div>
+            <div class="modal" id="cait-modal">
+              <div class="modal-header">
+                <div class="title">Caitlyn</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/caitlyngif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+            <!-- viktor -->
+            <div class="char-card viktor">
+              <img src="./imgs/CharacterPoster-Viktor.jpeg">
+              <div class="txt">
+                <p>The Machinist</p>
+              </div>
+              <img src="./imgs/piltover-crest-no-glow.png" class="piltoverCrest">
+            </div>
+            <div class="modal" id="viktor-modal">
+              <div class="modal-header">
+                <div class="title">Viktor</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/viktorgif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+            <!-- vi -->
+            <div class="char-card vi">
+              <img src="./imgs/CharacterPoster-Vi.jpeg">
+              <div class="txt">
+                <p>The Piltover Enforcer</p>
+              </div>
+              <img src="./imgs/zaun-crest-500.png" class="zaunCrest">
+            </div>
+            <div class="modal" id="vi-modal">
+              <div class="modal-header">
+                <div class="title">Vi</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/vigif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+            <!-- jinx -->
+            <div class="char-card jinx">
+              <img src="./imgs/CharacterPoster-Jinx.jpeg">
+              <div class="txt">
+                <p>The Loose Cannon</p>
+              </div>
+              <img src="./imgs/zaun-crest-500.png" class="zaunCrest">
+            </div>
+            <div class="modal" id="jinx-modal">
+              <div class="modal-header">
+                <div class="title">Jinx</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/jinxgif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+
+            <!-- jayce -->
+            <div class="char-card jayce">
+              <img src="./imgs/CharacterPoster-Jayce.jpeg">
+              <div class="txt">
+                <p>Piltover's Defender</p>
+              </div>
+              <img src="./imgs/piltover-crest-no-glow.png" class="piltoverCrest">
+            </div>
+            <div class="modal" id="jayce-modal">
+              <div class="modal-header">
+                <div class="title">Jayce</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/jaycegif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+            <!-- mel -->
+            <div class="char-card mel">
+              <img src="./imgs/CharacterPoster-Mel.jpeg">
+              <div class="txt">
+                <p>Councilor Medarda</p>
+              </div>
+              <img src="./imgs/piltover-crest-no-glow.png" class="piltoverCrest">
+            </div>
+            <div class="modal" id="mel-modal">
+              <div class="modal-header">
+                <div class="title">Mel</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/medardagif.webp"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+
+            <!-- vander -->
+            <div class="char-card vander">
+              <img src="./imgs/CharacterPoster-Vander.jpeg">
+              <div class="txt">
+                <p>The Hound</p>
+              </div>
+              <img src="./imgs/zaun-crest-500.png" class="zaunCrest">
+            </div>
+            <div class="modal" id="vander-modal">
+              <div class="modal-header">
+                <div class="title">Vander</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/vandergif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+            <!-- silco -->
+            <div class="char-card silco">
+              <img src="./imgs/CharacterPoster-Silco.jpeg">
+              <div class="txt">
+                <p>The Eye of Zaun</p>
+              </div>
+              <img src="./imgs/zaun-crest-500.png" class="zaunCrest">
+            </div>
+            <div class="modal" id="silco-modal">
+              <div class="modal-header">
+                <div class="title">Silco</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/silcogif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+            <!-- cait -->
+            <div class="char-card cait">
+              <img src="./imgs/CharacterPoster-Cait.jpeg">
+              <div class="txt">
+                <p>Sheriff of Piltover</p>
+              </div>
+              <img src="./imgs/piltover-crest-no-glow.png" class="piltoverCrest">
+            </div>
+            <div class="modal" id="cait-modal">
+              <div class="modal-header">
+                <div class="title">Caitlyn</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/caitlyngif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+            <!-- viktor -->
+            <div class="char-card viktor" style="margin-right:30px;">
+              <img src="./imgs/CharacterPoster-Viktor.jpeg">
+              <div class="txt">
+                <p>The Machinist</p>
+              </div>
+              <img src="./imgs/piltover-crest-no-glow.png" class="piltoverCrest">
+            </div>
+            <div class="modal" id="viktor-modal">
+              <div class="modal-header">
+                <div class="title">Viktor</div>
+                <button class="close-button">&times;</button>
+              </div>
+              <div class="gif"><img src="./imgs/viktorgif.gif"></div>
+              <div class="modal-body">
+                Vi, born as Violet, is a Zaunite vigilante and Jinx's older sister. A hotheaded and
+                fearless woman who excels at fighting and likes to solve her problems with her fists.
+              </div>
+            </div>
+            <div id="overlay"></div>
+
+
+          </div>
+
+
+          <div id="scroll-btn-box">
+            <div class="scroll-btn" id="btn-right"><img src="./imgs/leftarrow.png" alt=""></div>
+            <h1>Characters</h1>
+            <div class="scroll-btn" id="btn-left"><img src="./imgs/rightarrow.png" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <!-- =================================================================================================== -->
+    <!-- nocolor jinx -->
+    <!-- =================================================================================================== -->
+    <!-- imagine as body -->
+    <div class='nocolorjinx'>
+      <div class='nocolorleft'>
+        <div class="brokenbox2">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class='nocolorright'>
+        <h1>Get Jinxed!</h1>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat ad omnis at provident nostrum corrupti
+          dolor
+          sapiente ullam, praesentium eius. Error quibusdam esse corrupti mollitia odio fugit velit delectus ipsa.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis, necessitatibus labore eaque
+          unde atque nisi veritatis est commodi. Laudantium aut iure optio ipsam incidunt perferendis sunt libero illo
+          enim!</p>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- =================================================================================================== -->
+    <!-- color jinx -->
+    <!-- =================================================================================================== -->
+
+    <div class="colorjinx">
+      <div class="colorleft">
+        <h1>BOOM! POW!</h1>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat ad omnis at provident nostrum corrupti
+          dolor
+          sapiente ullam, praesentium eius. Error quibusdam esse corrupti mollitia odio fugit velit delectus ipsa.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem facilis, necessitatibus labore eaque
+          unde atque nisi veritatis est commodi. Laudantium aut iure optio ipsam incidunt perferendis sunt libero illo
+          enim!</p>
+      </div>
+
+      <div class='colorright'>
+        <div class="brokenbox">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <!-- =================================================================================================== -->
+  <!-- footer page -->
+  <!-- =================================================================================================== -->
+  <div class="main-footer">
+    <div class="containerr">
+
+      <div class="footer-item">
+        <h4>RIOT GAMES</h4>
+        <nav>
+          <a target="_blank"
+            href="https://www.leagueoflegends.com/en-us/?utm_source=riotbar&utm_medium=productcard%2Barcane.com&utm_campaign=lol&utm_content=lol_keyart01"><i
+              class="fa-solid fa-paper-plane"></i> League of Legends</a>
+          <a target="_blank"
+            href="https://playvalorant.com/en-us/?utm_source=riotbar&utm_medium=productcard%2Bwww.leagueoflegends.com&utm_campaign=val&utm_content=ep5act1"><i
+              class="fa-solid fa-paper-plane"></i> Valorant</a>
+          <a target="_blank"
+            href="https://wildrift.leagueoflegends.com/en-us/?utm_source=riotbar&utm_medium=productcard%2Bplayvalorant.com&utm_campaign=wr&utm_content=wr_keyart01"><i
+              class="fa-solid fa-paper-plane"></i> LOL: Wild Rift</a>
+        </nav>
+      </div>
+
+      <div class="footer-item">
+        <h4>SOCIAL MEDIA</h4>
+        <nav>
+          <a target="_blank" href="https://www.instagram.com/arcaneshow/"><i class="fa-solid fa-paper-plane"></i>
+            Instagram</a>
+          <a target="_blank" href="https://www.facebook.com/arcaneshow"><i class="fa-solid fa-paper-plane"></i>
+            Facebook</a>
+          <a target="_blank" href="https://twitter.com/arcaneshow"><i class="fa-solid fa-paper-plane"></i> Twitter</a>
+        </nav>
+      </div>
+
+      <div class="footer-item">
+        <h4>MUSIC</h4>
+        <nav>
+          <a target="_blank" href="https://lnk.to/ArcaneLeagueofLegends"><i class="fa-solid fa-paper-plane"></i>
+            Spotify</a>
+          <a target="_blank" href="https://lnk.to/ArcaneLeagueofLegends"><i class="fa-solid fa-paper-plane"></i> Apple
+            Music</a>
+          <a target="_blank" href="https://www.netflix.com/tw/title/81435684"><i class="fa-solid fa-paper-plane"></i>
+            Netflix</a>
+        </nav>
+      </div>
+
+      <div class="footer-item footer-subs">
+        <h4>SUBSCRIBE</h4>
+        <form action="">
+          <input type="text" name="" placeholder="EMAIL">
+          <input type="submit" value="subscribe">
+        </form>
+      </div>
+    </div>
+
+    <!-- copyright bar -->
+    <div class="copyright">
+      Copyright Johnny &copy; 2022
+    </div>
+
+  </div>
+
+
+  </div>
+
+  <!-- =================================================================================================== -->
+  <!-- All script links -->
+  <!-- =================================================================================================== -->
+
+  <!-- Jquery / js -->
+  <script src="jquery.js"></script>
+
+  <!-- gsap + scrolltrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="gsap.js"></script>
+
+  <!-- javascript.js -->
+  <script src="javascript.js"></script>
+
+
+  <!-- parallax copy paste -->
+
+
+</body>
+
+</html>

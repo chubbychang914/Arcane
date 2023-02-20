@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="self_intro.css">
+
+    <title>About Me</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Me</title>
+    </head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Press Start 2P', cursive;
+            /* outline: auto; */
+        }
+
+
+        body {
+            width: 100%;
+            height: 100vh;
+            /* overflow: hidden; */
+            background: url(./selfimg/bg.png);
+            background-position: center left;
+            /* linear : play an animation with the same speed from beginning to end */
+            animation: bg_loop 400s infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes bg_loop {
+            100% {
+                background-position: -120000px;
+            }
+        }
+    </style>
+
+    <body>
+        <div id="rtrnbtn">
+            <a href="index.html"><img src="./selfimg/rtrnicon.png"></a>
+        </div>
+        <div class="container-fluid header">
+            <img class="sun" src="./selfimg/sun.gif" style="position:absolute;top: 10px;; right:3%; width:200px;">
+            <div class="container letterBox">
+                <div class="letter letter1">A</div>
+                <div class="letter letter2">B</div>
+                <div class="letter letter3">O</div>
+                <div class="letter letter4">U</div>
+                <div class="letter letter5">T</div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="row main">
+
+                <div class="col middle">
+
+                    <!-- <img class="dino2" src="./selfimg/dinopet.gif"> -->
+                    <div style="position: absolute;">
+                        <div class="cardd">
+                            <div class="imgBx">
+                                <img src="./selfimg/choco.jpg">
+                            </div>
+                            <div class="contentt">
+                                <div class="details">
+                                    <h2>Johnny</h2>
+                                    <div class="data">
+                                        <h3>100 <br><span>Meows</span></h3>
+                                        <h3>200<br><span>Blinks</span></h3>
+                                    </div>
+                                    <p>Say hello to Choco. He loves to meow and eat and sleep.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="btnInCard d-flex flex-column justify-content-center">
+                            <div class="btn btn-primary mb-4" id="btnemail"><i class="fa-solid fa-envelope"> Email
+                                    Me
+                                    !</i>
+                            </div>
+                            <div class="btn btn-primary mb-4" id="btncall"><i class="fa-solid fa-phone"> Call Me
+                                    !</i>
+                            </div>
+                            <div class="btn btn-warning mb-4" id="btn1"><i class="fa-solid fa-x"> Close</i></div>
+                        </div>
+
+                    </div>
+                    <img class="dino" src="./selfimg/dinowalk.gif">
+                </div>
+
+            </div>
+
+
+
+            <div class="row footer">
+                <div class="col" id="btnBox">
+                    <div class="btn btn-danger btn-lg" id="btn2">Click Me!</div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- ======================= -->
+        <!-- gsap link -->
+        <!-- ======================= -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+        <script>
+
+            // pull out night slide =============================================================================
+            const timeline = gsap.timeline({
+                defaults: { duration: 2 },
+                paused: true
+            })
+            timeline
+                .from('.middle', {
+                    x: '-100%',
+                    duration: 1.5,
+                    ease: 'sine.in',
+                })
+                .to('.dino', {
+                    rotation: 40
+                }, '0')
+                .to('.dino', {
+                    x: '-200%',
+                    rotation: '-360',
+                    duration: 1,
+                    delay: .2
+                })
+                .to('.dino', {
+                    x: '90%',
+                    duration: 5,
+                    ease: 'power'
+                })
+
+
+
+            // morning button
+            const btn1 = document.querySelector('#btn1');
+            btn1.addEventListener('click', () => {
+                timeline.reverse(1.5)
+                spiral.reverse()
+                middle.style.overflow = 'visible'
+            })
+
+
+            // night button
+            const middle = document.querySelector('.middle')
+            const btn2 = document.querySelector('#btn2');
+            btn2.addEventListener('click', () => {
+                timeline.play(0.001)
+                spiral.play(0.001)
+                setTimeout(() => {
+                    middle.style.overflow = 'hidden'
+                }, 2000)
+            })
+
+            let spiral =
+                gsap.to('#btn2', {
+                    paused: true,
+                    duration: 1,
+                    rotation: 1080,
+                    ease: 'none',
+                    scale: 0
+                })
+
+
+
+
+            // animate on load =============================================================================
+            gsap.from('.sun', {
+                y: '-100%',
+                duration: 2,
+                delay: .5
+            })
+
+            const timeline2 = gsap.timeline({
+                repeat: -1,
+                repeatDelay: 1.5,                         // endless loop
+                yoyo: true                          // from and back
+            })
+
+            timeline2
+                .to('.letter1', {
+                    y: '38vh',
+                    duration: 1.5,
+                    ease: 'bounce',
+                    delay: 0.5
+                })
+                .fromTo('.letter1',
+                    { color: 'black' },
+                    { color: 'white' }, '<0.1'
+                )
+                .to('.letter2', {
+                    y: '38vh',
+                    duration: 1.5,
+                    ease: 'bounce'
+                }, '<0.6')
+                .fromTo('.letter2',
+                    { color: 'black' },
+                    { color: 'white' }, '<0.1'
+                )
+                .to('.letter3', {
+                    y: '38vh',
+                    duration: 1.5,
+                    ease: 'bounce'
+                }, '<0.6')
+                .fromTo('.letter3',
+                    { color: 'black' },
+                    { color: 'white' }, '<0.1'
+                )
+                .to('.letter4', {
+                    y: '38vh',
+                    duration: 1.5,
+                    ease: 'bounce'
+                }, '<0.6')
+                .fromTo('.letter4',
+                    { color: 'black' },
+                    { color: 'white' }, '<0.1'
+                )
+                .to('.letter5', {
+                    y: '38vh',
+                    duration: 1.5,
+                    ease: 'bounce'
+                }, '<0.6')
+                .fromTo('.letter5',
+                    { color: 'black' },
+                    { color: 'white' }, '<0.1'
+                )
+
+
+            // hello sun =============================================================================
+            const timeline3 = gsap.timeline({
+                defaults: { duration: 2 },
+                paused: true
+            })
+            timeline3
+                .to('.dino', {
+                    x: '75vw'
+                })
+                .to('.dino', {
+                    rotation: -30
+                })
+                .to('.sun', {
+                    y: '25vh',
+                    ease: 'power',
+                    duration: 1
+                }, '<0.5')
+                .to('.sun', {
+                    y: '',
+                })
+                .to('.dino', {
+                    rotation: 0
+                }, '<0.1')
+                .to('.dino', {
+                    x: ''
+                })
+
+            const sun = document.querySelector('.sun');
+            sun.addEventListener('click', () => {
+                timeline3.play(0.001)
+            })
+
+
+        </script>
+    </body>
+
+    </html>
+
+
+
+
+
+
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

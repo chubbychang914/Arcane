@@ -1,0 +1,1067 @@
+/* ======================================================================================= */
+/* general reset */
+/* ======================================================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    /* outline: auto; */
+}
+
+body {
+    background-color: #332332;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+
+
+/* ======================================================================================= */
+/* navbar */
+/* ======================================================================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.minibox {
+    display: flex;
+}
+
+.minibox a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(1, 1, 1, 0.7);
+    color: white;
+    font-weight: bolder;
+    font-weight: bold;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 1px 10px 10px rgba(1, 1, 1, 0.3);
+    transition: 0.5s;
+}
+
+.brand-title {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.brand-img {
+    width: 2.8rem;
+    /* background-color: blue; */
+    margin: 1rem 0.8rem;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* background-color: #332332; */
+}
+
+.navbar-links li {
+    list-style: none;
+    padding: 0.8rem;
+    /* outline: auto; */
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+
+
+
+/* hamburger menu */
+
+.toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem;
+    height: 2rem;
+    transform: translateY(100%);
+    margin-right: 10px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+@media(max-width:900px) {
+    .toggle-button {
+        display: flex;
+        transform: none;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        /* padding: 16px; */
+        background-color: black;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* the sticky class is added when reaches scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* add some top padding to prevent sudden quick movement as navbar gets new position on top of page */
+.sticky+.navbar {
+    padding-top: 60px;
+}
+
+
+
+
+
+/* ======================================================================================= */
+/* title page */
+/* ======================================================================================= */
+
+#title-page {
+    /* background-color: black; */
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* glass image ----------------------*/
+#glassTop {
+    position: absolute;
+    top: 0;
+}
+
+#glassBottom {
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+}
+
+
+/* middle letters------------------------- */
+.mainContent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#letterBox {
+    width: 45%;
+    display: flex;
+}
+
+#lolLogo {
+    width: 20%;
+    margin: 20px 0 20px 0;
+}
+
+@media (max-width: 1000px) {
+    #letterBox {
+        width: 45%;
+        display: flex;
+    }
+
+    #lolLogo {
+        width: 30%;
+        margin: 20px 0 20px 0;
+    }
+}
+
+/* watch trailer button */
+.button-57 {
+    background: linear-gradient(150deg, rgb(181, 138, 77) 32%, rgb(237, 224, 206) 68%) 100% 50% / 400% 100%;
+    position: relative;
+    min-height: 4rem;
+    width: 11rem;
+    overflow: hidden;
+    border: 1px solid #18181a;
+    color: rgb(8, 19, 41);
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-top: 0.3em;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    /* border-radius: 5px; */
+    /* box-shadow: 0 0 2px rgb(237, 224, 206); */
+    /* font-family: 'Secular One', sans-serif; */
+    font-weight: lighter;
+}
+
+.button-57 span:first-child {
+    position: relative;
+    transition: color 800ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+}
+
+.button-57 span:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 45px;
+    object-fit: scale-down;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+}
+
+.button-57:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+}
+
+.button-57:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+}
+
+.button-57:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 1000ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+
+
+#netflixLink {
+    height: 80%;
+    width: 40%;
+}
+
+#netflixLink div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#netflixLink div img {
+    width: 9em;
+}
+
+#miniScroll {
+    height: 80%;
+    width: 10%;
+}
+
+#formBox {
+    height: 80%;
+    width: 40%;
+    padding: 0px 0px 20px;
+}
+
+#formBox h1 {
+    font-size: 16px;
+}
+
+
+/* video sizing ---------------------------------- */
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+/* these two makes sure that video stays in scale */
+@media(min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media(max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+
+/* ======================================================================================= */
+/* parallax background */
+/* ======================================================================================= */
+.scroll-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(./imgs/piltover_city.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    overflow-y: hidden;
+}
+
+.cover {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+}
+
+.divided {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    opacity: 1;
+    transform: translateX(-50%);
+    color: rgb(237, 224, 206);
+    /* outline: auto; */
+    text-align: center;
+}
+
+.divided h1 {
+    font-size: 7rem;
+}
+
+/* Jinx and vi */
+#jinxvi-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url(./imgs/vijinxcolored.jpeg);
+    background-color: #18181a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#jinxvi-page .paragraphBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    width: 70%;
+    position: absolute;
+    z-index: 5;
+    color: rgb(237, 224, 206);
+    color: white;
+}
+
+
+.paragraphBox h1 {
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 4rem;
+    color: white;
+}
+
+.paragraphBox h1 span:nth-of-type(1) {
+    color: blueviolet;
+    font-size: 150px;
+    font-weight: 900px;
+}
+
+.paragraphBox h1 span:nth-of-type(2) {
+    color: red;
+    font-size: 150px;
+}
+
+.slidep {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0 6rem;
+}
+
+
+/* character slide */
+#characterslide {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* ======================================================================================= */
+/* no color jinx*/
+/* ======================================================================================= */
+.nocolorjinx {
+    background: url(./imgs/blackwhite.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    width: 100%;
+    height: 125vh;
+    display: flex;
+
+}
+
+
+.nocolorleft {
+    width: 70%;
+    height: 125vh;
+    /* background-color: green; */
+    /* outline: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.nocolorright {
+    width: 30%;
+    height: 125vh;
+    background-color: #332332;
+    color: rgb(237, 224, 206);
+    border-left: 1px solid white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3em;
+    font-size: 1.3em;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+
+.brokenbox2 {
+    width: 40rem;
+    height: 30rem;
+    position: relative;
+    /* background-color: blue; */
+}
+
+.brokenbox2 span {
+    position: absolute;
+    inset: 0;
+    transition: 0.5s;
+    background-image: url(./imgs/jinxwgun2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px double white;
+    transform: rotate(-5deg);
+
+
+    /* filter: grayscale(1); */
+}
+
+
+.brokenbox2 span:nth-child(1) {
+    clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+    /* background-color: red; */
+}
+
+.brokenbox2 span:nth-child(2) {
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+    /* background-color: green; */
+}
+
+.brokenbox2 span:nth-child(3) {
+    clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+    /* background-color: yellow; */
+}
+
+.brokenbox2 span:nth-child(4) {
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    /* background-color: white; */
+}
+
+/* hover effects*/
+.brokenbox2:hover span:nth-child(1) {
+    transform: translate(-100px, -100px) rotate(-20deg);
+    transition-delay: 0s;
+}
+
+.brokenbox2:hover span:nth-child(2) {
+    transform: translate(70px, -100px) rotate(30deg);
+    transition-delay: 0.20s;
+}
+
+.brokenbox2:hover span:nth-child(3) {
+    transform: translate(-100px, 130px) rotate(25deg);
+    transition-delay: 0.40s;
+}
+
+.brokenbox2:hover span:nth-child(4) {
+    transform: translate(70px, 130px) rotate(-20deg);
+    transition-delay: 0.6s;
+}
+
+/* ======================================================================================= */
+/* color jinx*/
+/* ======================================================================================= */
+.colorjinx {
+    background: url(./imgs/color.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+
+    width: 100%;
+    height: 125vh;
+    display: flex;
+    border-top: 1px solid white;
+}
+
+.colorleft {
+    width: 30%;
+    height: 125vh;
+    background-color: black;
+    border-right: 1px solid white;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3em;
+    font-size: 1.3em;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.colorright {
+    width: 70%;
+    height: 125vh;
+    /* background-color: green; */
+    /* outline: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.brokenbox {
+    width: 40rem;
+    height: 31rem;
+    position: relative;
+    transform: rotate(5deg);
+    /* background-color: blue; */
+}
+
+.brokenbox span {
+    position: absolute;
+    inset: 0;
+    transition: 0.5s;
+    background-image: url(./imgs/jinxwgun.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 3px double orange;
+}
+
+
+.brokenbox span:nth-child(1) {
+    clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+    /* background-color: red; */
+}
+
+.brokenbox span:nth-child(2) {
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+    /* background-color: green; */
+}
+
+.brokenbox span:nth-child(3) {
+    clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+    /* background-color: yellow; */
+}
+
+.brokenbox span:nth-child(4) {
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    /* background-color: white; */
+}
+
+/* hover effects*/
+.brokenbox:hover span:nth-child(1) {
+    transform: translate(-100px, -100px) rotate(-20deg);
+    transition-delay: 0s;
+}
+
+.brokenbox:hover span:nth-child(2) {
+    transform: translate(70px, -100px) rotate(30deg);
+    transition-delay: 0.20s;
+}
+
+.brokenbox:hover span:nth-child(3) {
+    transform: translate(-100px, 130px) rotate(25deg);
+    transition-delay: 0.40s;
+}
+
+.brokenbox:hover span:nth-child(4) {
+    transform: translate(70px, 130px) rotate(-20deg);
+    transition-delay: 0.6s;
+}
+
+
+/* ======================================================================================= */
+/* character cards */
+/* ======================================================================================= */
+
+#wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(./imgs/media-cards-bg-purple-d-f5b6d7ea814243730e3d7e010d5f4e89.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#wrapper h1 {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    color: white;
+    font-size: 3rem;
+}
+
+
+@media(max-width: 700px) {
+    .scroll-btn {
+        visibility: hidden;
+    }
+}
+
+#scroll-btn-box {
+    min-width: 550px;
+    /* min-width: 700px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* outline: auto; */
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.scroll-btn {
+    display: flex;
+    padding: .5rem;
+    width: 3.7rem;
+    height: 3.7rem;
+    border-radius: 10px;
+    background-color: goldenrod;
+    border: 3px solid black;
+    text-align: center;
+    transition: .2s;
+    /* outline: auto; */
+}
+
+.scroll-btn:hover {
+    border-radius: 50%;
+    scale: 1.7;
+    box-shadow: 0 0 10px goldenrod;
+}
+
+#char-card-box {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    margin-top: 9rem;
+    /* outline: auto; */
+}
+
+#char-card-box::-webkit-scrollbar {
+    display: none;
+}
+
+.char-card {
+    display: inline-block;
+    position: relative;
+    white-space: normal;
+    max-width: 300px;
+    background-color: #332332;
+    border: 1px solid gold;
+    margin-top: 45px;
+    text-align: center;
+    font-weight: bolder;
+    transition: 0.5s;
+
+    /* stack */
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 4px 4px 12px 2px rgba(0, 0, 0, 1);
+}
+
+.char-card:not(:first-child) {
+    margin-left: -5rem;
+}
+
+.char-card:hover~.char-card {
+    transform: translateX(6rem);
+}
+
+.char-card div {
+    position: absolute;
+    bottom: 0;
+    left: auto;
+}
+
+.char-card .zaunCrest {
+    width: 60px;
+    position: absolute;
+    bottom: 50px;
+    left: 123px;
+}
+
+.char-card .piltoverCrest {
+    width: 35px;
+    position: absolute;
+    bottom: 65px;
+    left: 131px;
+}
+
+.char-card:hover {
+    transform: translateY(-2rem) rotate(-2deg);
+    box-shadow: 0 0 18px gold;
+}
+
+.char-card p {
+    padding: 15px;
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin: 0;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.char-card .txt {
+    bottom: 0;
+    width: 100%;
+    background-color: #332332;
+    color: white;
+    position: relative;
+    transition: 0.25s;
+}
+
+.char-card .txt::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    /* 三角形斜度 */
+    border-top: 40px solid transparent;
+    border-left: 133px solid #332332;
+    border-right: 133px solid #332332;
+    transform: translateY(-100%);
+    transition: 0.25s;
+}
+
+.char-card:hover .txt {
+    background-color: #D4AF37;
+    color: black;
+}
+
+.char-card:hover .txt::before {
+    border-left: 133px solid #D4AF37;
+    border-right: 133px solid #D4AF37;
+}
+
+#footer-banner {
+    display: flex;
+    background-color: blue;
+    width: 100%;
+    height: 20vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+/* ======================================================================================= */
+/* character modals */
+/* ======================================================================================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px double #D4AF37;
+    border-radius: 1rem;
+    background: #332332;
+    width: 500px;
+    max-width: 80%;
+    z-index: 20;
+    white-space: normal;
+    font-family: 'Shadows Into Light', cursive;
+    color: rgb(237, 224, 206);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px double #D4AF37;
+}
+
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgb(237, 224, 206);
+}
+
+.modal .gif {
+    border-bottom: 3px double #D4AF37;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* so we can click on open modal button */
+    /* pointer-events: none; */
+    z-index: 10;
+}
+
+
+/* ======================================================================================= */
+/* more info footer */
+/* ======================================================================================= */
+.main-footer {
+    padding: 100px 0 0 0;
+    /* height: 100vh; */
+    background: linear-gradient(20deg, black, #332332);
+    font-family: 'Shadows Into Light', cursive;
+    /* linear-gradient background shorthand */
+}
+
+.main-footer .containerr {
+    display: flex;
+    width: 100%;
+    /* height: 50vh; */
+    margin: auto;
+    /* outline: auto; */
+}
+
+.footer-item {
+    width: 0;
+    flex-grow: 1;
+    margin: 0 20px;
+    /* outline: auto; */
+}
+
+
+.footer-item h4 {
+    font-size: 24px;
+    color: white;
+    border-bottom: 1px solid #fff;
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+}
+
+.footer-item nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-item nav a {
+    color: white;
+    line-height: 1.4;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.footer-subs {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer-subs form {
+    display: flex;
+    width: 100%;
+    margin: auto 0;
+}
+
+.footer-subs input[type="text"],
+.footer-subs input[type="submit"] {
+    border: none;
+    padding: 5px 10px;
+}
+
+.footer-subs input[type="text"] {
+    width: 0;
+    flex-grow: 1;
+}
+
+.footer-subs input[type="submit"] {
+    color: white;
+    background-color: goldenrod;
+}
+
+
+.copyright {
+    text-align: center;
+    margin: 150px 0 0;
+    padding: 10px 0;
+    background-color: #332332;
+    color: white;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .main-footer .containerr {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .footer-item {
+        width: 85vw;
+        margin-bottom: 50px;
+    }
+
+    .footer-item h4 {
+        font-size: 1.8rem;
+    }
+
+    .footer-item nav a {
+        font-size: 1rem;
+    }
+}

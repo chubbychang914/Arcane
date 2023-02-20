@@ -1,0 +1,119 @@
+/* make page fade in onload --------------------------------------------*/
+#glassTop {animation: transition-in-top 1.8s;}
+
+#glassBottom {animation: transition-in-bot 1.8s;}
+
+#title-page {animation: transition-video 3s;}
+
+#letterBox div:nth-of-type(1) {animation: transition-letter 2.5s;}
+
+#letterBox div:nth-of-type(2) {animation: transition-letter 2.6s;}
+
+#letterBox div:nth-of-type(3) {animation: transition-letter 2.7s;}
+
+#letterBox div:nth-of-type(4) {animation: transition-letter 2.8s;}
+
+#letterBox div:nth-of-type(5) {animation: transition-letter 2.9s;}
+
+#letterBox div:nth-of-type(6) {animation: transition-letter 3s;}
+
+#lolLogo {animation: transition-logo 3s;}
+
+#trailerBtn{animation:transition-btn 3s ease-in ;}
+
+
+@keyframes transition-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    30% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes transition-in-bot {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    30% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes transition-letter {
+    0% {
+        opacity: 0;
+        /* transform: translateY(-100px); */
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes transition-logo {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes transition-btn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes transition-video {
+    0% {
+        opacity: 0;
+        background: black;
+    }
+    17% {
+        opacity: 0;
+        background: black;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
