@@ -782,7 +782,7 @@ body {
     overflow-y: hidden;
     white-space: nowrap;
     scroll-behavior: smooth;
-    margin-top: 9rem;
+    margin-top: 5rem;
     /* outline: auto; */
 }
 
@@ -794,10 +794,10 @@ body {
     display: inline-block;
     position: relative;
     white-space: normal;
-    max-width: 300px;
+    max-width: 250px;
     background-color: #332332;
     border: 1px solid gold;
-    margin-top: 45px;
+    margin-top: 30px;
     text-align: center;
     font-weight: bolder;
     transition: 0.5s;
@@ -826,14 +826,14 @@ body {
     width: 60px;
     position: absolute;
     bottom: 50px;
-    left: 123px;
+    left: 95px;
 }
 
 .char-card .piltoverCrest {
     width: 35px;
     position: absolute;
     bottom: 65px;
-    left: 131px;
+    left: 107px;
 }
 
 .char-card:hover {
@@ -867,8 +867,8 @@ body {
     height: 0;
     /* 三角形斜度 */
     border-top: 40px solid transparent;
-    border-left: 133px solid #332332;
-    border-right: 133px solid #332332;
+    border-left: 108px solid #332332; 
+    border-right: 108px solid #332332; 
     transform: translateY(-100%);
     transition: 0.25s;
 }
@@ -879,8 +879,8 @@ body {
 }
 
 .char-card:hover .txt::before {
-    border-left: 133px solid #D4AF37;
-    border-right: 133px solid #D4AF37;
+    border-left: 108px solid #D4AF37;
+    border-right: 108px solid #D4AF37;
 }
 
 #footer-banner {
